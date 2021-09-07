@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manager</title>
+    <title>Admin</title>
 </head>
 
 <body>
 <pre>
 <center>
-<h2>Manager (Radzi)</h2>
-
+<h2>Admin (Zatul)</h2>
+            
 <hr></hr> 
 
 </body>

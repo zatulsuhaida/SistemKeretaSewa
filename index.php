@@ -13,12 +13,16 @@
 <h2>DFP4063 Projek Web Programming</h2>
         
 <h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
-            
-<a href="manager/index.php">Manager (Zatul)</a>
+
+<h2>CRUD</h2>            
+<a href="admin/index.php">Admin (Zatul)</a>
+- menguruskan senarai kereta 
        
-<a href="staff/index.php">Staff (Radzi)</a>
+<a href="manager/index.php">Manager (Radzi)</a>
+-menguruskan senarai customer
           
 <a href="customer/index.php">Customer (Syakir)</a>
+-menguruskan senarai tempahan kereta
 
 <hr></hr> 
 
