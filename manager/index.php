@@ -11,10 +11,27 @@
 
 <body>
     <pre>
-<center>
-<h2>Manager (Radzi)</h2>
-
-<hr></hr> 
+    <center>
+        <h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
+        <p>Nama Programmer : <a href="radzi.php">Manager (Radzi)</a></p>
+    </center>
+    </pre>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="sk.php">Senarai Maklumat Customer</a></li>
+                <li><a href="dk.php">Daftar Customer</a></li>
+                <li><a href="sp.php">Set Password</a></li>
+                <li><a href="../index.php">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <p><b>Senarai Maklumat Customer</b></p>
+    <hr>
+    </hr>
 
 </body>
+
 </html>

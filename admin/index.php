@@ -11,10 +11,27 @@
 
 <body>
     <pre>
-<center>
-<h2>Admin (Zatul)</h2>
-            
-<hr></hr> 
+    <center>
+        <h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
+        <p>Nama Programmer : <a href="zatul.php">Admin (Zatul)</a></p>
+    </center>
+    </pre>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="sk.php">Senarai Kereta</a></li>
+                <li><a href="dk.php">Daftar Kereta</a></li>
+                <li><a href="sp.php">Set Password</a></li>
+                <li><a href="../index.php">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <p><b>Senarai Kereta</b></p>
+    <hr>
+    </hr>
 
 </body>
+
 </html>

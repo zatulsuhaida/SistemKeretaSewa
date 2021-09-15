@@ -10,26 +10,42 @@
 </head>
 
 <body>
-   
+    <center>
+        <form action="pageHome.php" method="post">
+            <h2>Login</h2>
+            <div class="container"></div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required><br><br>
 
-<h2>DFP4063 Projek Web Programming</h2>
-        
-<h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required><br><br>
 
-<div><h2>CRUD</h2></div> 
-          
-<ul>
-    <li><a href="admin/index.php">Admin (Zatul)</a></li>
-    <p>- menguruskan senarai kereta</p> 
-       
-    <li><a href="manager/index.php">Manager (Radzi)</a></li>
-    <p>- menguruskan senarai customer</p>
-          
-    <li><a href="customer/index.php">Customer (Syakir)</a></li>
-    <p>- menguruskan senarai tempahan kereta</p>
-</ul>
+            <button type="submit">Login</button>
 
-<hr></hr> 
+        </form>
 
+        <h2>DFP4063 Projek Web Programming</h2>
+
+        <h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
+
+        <div>
+            <h2>CRUD</h2>
+        </div>
+
+        <ul>
+            <li><a href="admin/index.php">Admin (Zatul)</a></li>
+            <p>- menguruskan senarai kereta</p>
+
+            <li><a href="manager/index.php">Manager (Radzi)</a></li>
+            <p>- menguruskan senarai customer</p>
+
+            <li><a href="customer/index.php">Customer (Syakir)</a></li>
+            <p>- menguruskan senarai tempahan kereta</p>
+        </ul>
+
+        <hr>
+        </hr>
+    </center>
 </body>
+
 </html>
