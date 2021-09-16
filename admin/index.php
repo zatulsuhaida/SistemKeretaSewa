@@ -32,9 +32,6 @@
     <a href="../logout.php">Keluar</a>
     ]
 </nav>
-    <div>
-        <h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
-        </div>
     <table border="1">
      <tr>
         <th>Bil</th>
