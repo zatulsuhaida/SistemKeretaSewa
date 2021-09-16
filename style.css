@@ -1,0 +1,99 @@
+body {
+    background-color: #85e0e0;
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+}
+
+
+.header {
+ padding: 80px;
+ text-align: center;
+ background: #1abc9c;
+ color: white;
+}
+
+
+.header h1 {
+ font-size: 40px;
+}
+h1 {
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 30px;
+font-family: "Times New Roman", Times, serif;
+ color: #FF3E00 ;
+}
+h2 {
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 30px;
+font-family: "Times New Roman", Times, serif;
+ color: #006666;
+}
+p {
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 22px;
+font-family: "Arial", Times, serif;
+ color: #000000;
+}
+
+.navbar {
+ overflow: hidden;
+ background-color: #333;
+}
+
+
+.navbar a {
+ float: left;
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 20px;
+ text-decoration: none;
+}
+
+.navbar a.right {
+ float: right;
+}
+
+
+.navbar a:hover {
+ background-color: #ddd;
+ color: black;
+}
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 0;
+   }
+
+   /* Header/logo Title */
+   .header {
+     background-position: center;
+     background-image: url("header2.png");
+     height: 10%;
+     /* Position and center the image to scale nicely on all screens */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+   }
+
+   /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+   .navbar {
+     overflow: hidden;
+     background-color: rgb(4, 88, 214);
+     position: sticky;
+     position: -webkit-sticky;
+     top: 0;
+   }
+
+   /* Style the navigation bar links */
+   .navbar a {
+     float: left;
+     display: block;
+     color: rgb(248, 189, 79);
+     text-align: center;
+     padding: 10px 20px;
+     text-decoration: none;
+   }
