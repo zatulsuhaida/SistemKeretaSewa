@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2021 at 03:38 PM
+-- Generation Time: Sep 16, 2021 at 04:03 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `kereta` (
   `idkereta` int(10) NOT NULL,
   `modal` varchar(20) NOT NULL,
-  `Priceperday` int(10) NOT NULL,
-  `Priceperweek` int(10) NOT NULL
+  `Priceperday` varchar(10) NOT NULL,
+  `Priceperweek` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -39,10 +39,10 @@ CREATE TABLE `kereta` (
 --
 
 INSERT INTO `kereta` (`idkereta`, `modal`, `Priceperday`, `Priceperweek`) VALUES
-(1, 'saga', 100, 700),
-(2, 'Myvi', 80, 560),
-(3, 'Alza', 120, 840),
-(4, 'Axia', 60, 420);
+(1, 'saga', 'RM 100', 'RM 700'),
+(2, 'Myvi', 'RM 80', 'RM 560'),
+(3, 'Alza', 'RM 120', 'RM 840'),
+(4, 'Axia', 'RM 60', 'RM 420');
 
 --
 -- Indexes for dumped tables
