@@ -1,9 +1,16 @@
+<?php
+session_start();
+include('connection.php');
+
+$sql="SELECT * FROM kereta";
+$result = mysqli_query($conn,$sql);  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head><style id="stndz-style"></style>
     <title>SKS</title>
-<link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css">
    
 </head>
 
@@ -23,7 +30,7 @@
     [
     <a href="../index.php">Home</a>
     |
-     <a href="index.php?menu=senaraiKereta">Senarai Kereta</a>
+     <a href="listcar.php?menu=senaraiKereta">Senarai Kereta</a>
     |
      <a href="index.php?menu=daftarKereta">Daftar Kereta</a>
     |
@@ -32,28 +39,44 @@
     <a href="../logout.php">Keluar</a>
     ]
 </nav>
-    <table border="1">
-     <tr>
-        <th>Bil</th>
-        <th>Jumlah Kereta</th>
-        <th>Jenama</th>
-        <th>Harga</th>
-    </tr>
-    <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>myvi</td>
-            <td>100</td>
-            
-        </tr>
-            <tr>
-            <td>2</td>
-            <td>1</td>
-            <td>alza</td>
-            <td>100</td>
-            
-        </tr>
+
+<center><h2> Display Car List</h2></center>
+<br>
+<table border="1">
+<tr>
+<th>Idkereta</th>
+<th>Modal</th>
+<th>Priceperday</th>
+<th>Priceperweek</th>
+</tr>
+
+<?php
+if (mysqli_num_rows($result)>0)    
+{
+
+	
+	while($row = mysqli_fetch_assoc($result)){
+ ?>
+
+<tr>
+<td><?php echo $row["idkereta"]; ?></td>
+<td><?php echo $row["modal"]; ?></td>
+<td><?php echo $row["Priceperday"]; ?></td>
+<td><?php echo $row["Priceperweek"]; ?></td>
+</tr>
+
+<?php
+
+       }
+	
+     }
+      else{
+	   echo "0 results";
+           }
+            mysqli_close($conn);
+?>
 
 </table>
 </body>
 <html>
+    
