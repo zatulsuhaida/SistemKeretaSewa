@@ -27,7 +27,7 @@ $row = $resultusr->fetch_assoc();
     <nav style="background-color: hotpink"> 
         <strong style="font-size: xx-large"></strong> 
         [ 
-        <a class="active" href="index.php">Home</a> 
+        <a class="active" href="../index.php">Home</a> 
         | 
         <a href="listcar.php">Car List </a> 
         | 
