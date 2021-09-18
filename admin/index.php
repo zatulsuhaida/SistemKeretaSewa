@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $sql);
 <body> 
     <center> 
         <h2> Display Car List</h2> 
-        <br> Nama Programmer: <a href="admin/">admin (suhaida)</a> 
+        <br> Nama Programmer: admin (suhaida)</a> 
     </center> 
     <nav style="background-color: hotpink"> 
         <strong style="font-size: xx-large"></strong> 
@@ -26,8 +26,6 @@ $result = mysqli_query($conn, $sql);
         <a href="listcar.php">Car List </a> 
         | 
         <a href="register.php">Register Car</a> 
-        | 
-        <a href="staff_list.php">Detail Staff</a> 
         ] 
     </nav> 
     <br> 
