@@ -66,7 +66,6 @@ $row = $resultusr->fetch_assoc();
         <br> 
         <center> 
             <input type="submit" value="Update" style="background-color:PaleGreen;font-size: 15px;" /> 
-            <input type="reset" value="Reset" style="background-color:Salmon;font-size: 15px;" /> 
             <input type="hidden" name="idkereta" value="<?php echo $row["idkereta"]; ?>" /> 
         </center> 
     </form> 
