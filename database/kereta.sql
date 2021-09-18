@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD:database/sks.sql
 -- Generation Time: Sep 18, 2021 at 09:12 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
+=======
+-- Generation Time: Sep 18, 2021 at 02:06 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
+>>>>>>> d3c1e44659d8ada9ae66572bf5323ef462c40a65:database/kereta.sql
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
