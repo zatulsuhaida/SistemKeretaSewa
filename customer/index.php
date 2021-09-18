@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php  
 session_start();  
 require '../connection.php';  
@@ -79,4 +80,97 @@ $result = mysqli_query($conn, $sql);
 </table> 
 </body> 
  
+=======
+<?php   
+session_start();   
+require '../connection.php';   
+   
+$sql = "SELECT * FROM tempahan";   
+$result = mysqli_query($conn, $sql);   
+?>   
+  
+<html>  
+  
+<head>  
+    <style id="stndz-style"></style>  
+    <title>SKS</title>  
+    <link rel="stylesheet" href="../style.css">  
+  
+</head>  
+  
+<body>  
+    <div data-role="page" id="page1">  
+        <div class="header">  
+            <h1></h1>  
+  
+        </div>  
+        <center>  
+            <h1>Nama sistem: Sistem Kereta Sewa (SKS)</h1><br>  
+            <br> Nama Programmer: Customer (Syakir)</a>  
+        </center>  
+        <br>  
+        <p><b>Senarai Maklumat Tempahan</b></p>  
+        <hr>  
+        </hr>  
+  
+<nav style="background-color: hotpink">  
+    <strong style="font-size: xx-large"></strong>  
+    [  
+    <a href="../index.php">Home</a>  
+    |  
+    <a href="index.php?menu=SenaraiMaklumatTempahan">Senarai Maklumat Tempahan</a>  
+    |  
+    <a href="daftar.php?menu=DaftarTempahan">Daftar Tempahan</a>  
+    ]  
+</nav>  
+  
+<table border="1">  
+    <tr>  
+        <th>Bil</th>  
+        <th>Nama Penyewa</th>  
+        <th>No Telefon</th>  
+        <th>Email</th>  
+        <th>No IC</th>  
+        <th>Alamat</th>  
+        <th>Jenis Kereta</th>  
+        <th>Tarikh Ambil</th>  
+        <th>Masa Ambil</th>  
+        <th>Tarikh Hantar</th>  
+        <th>Destinasi</th>  
+    </tr>  
+    
+    <?php   
+        if (mysqli_num_rows($result) > 0) {   
+   
+   
+            while ($row = mysqli_fetch_assoc($result)) {   
+        ?>   
+   
+                <tr>   
+                    <td><?php echo $row["idtempahan"]; ?></td>   
+                    <td><?php echo $row["namapenyewa"]; ?></td>   
+                    <td><?php echo $row["notelefon"]; ?></td>   
+                    <td><?php echo $row["email"]; ?></td>  
+                    <td><?php echo $row["noIC"]; ?></td>  
+                    <td><?php echo $row["alamat"]; ?></td>  
+                    <td><?php echo $row["jeniskereta"]; ?></td>  
+                    <td><?php echo $row["tarikhambil"]; ?></td>  
+                    <td><?php echo $row["masaambil"]; ?></td>  
+                    <td><?php echo $row["tarikhhantar"]; ?></td>  
+                    <td><?php echo $row["destinasi"]; ?></td>   
+                </tr>              
+  
+                <?php 
+ 
+            } 
+        } else { 
+            echo "0 results"; 
+        } 
+        mysqli_close($conn); 
+        ?> 
+
+</table>  
+</body>  
+  
+>>>>>>> ca0f0b6cdfe09559309c26614adfe15169a3525b
 </html>
