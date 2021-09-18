@@ -66,45 +66,6 @@
         <td>23 Jun 2021</td>
         <td>Pulau Pinang</td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>Fahmi Yusof</td>
-        <td>fahmi@yahoo.com</td>
-        <td>0195659039</td>
-        <td>991218020689</td>
-        <td>No 29 Taman Sri Mawar</td>
-        <td>Alza</td>
-        <td>1 Ogos 2021</td>
-        <td>9:00 AM</td>
-        <td>4 Ogos 2021</td>
-        <td>Kelantan</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Siti Rosalinda</td>
-        <td>ros@gmail.com</td>
-        <td>0185659047</td>
-        <td>980116140688</td>
-        <td>No 37 Taman Sri Gombak</td>
-        <td>Axia</td>
-        <td>7 July 2021</td>
-        <td>10:00 AM</td>
-        <td>8 July 2021</td>
-        <td>Perlis</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Nur Batrisya</td>
-        <td>batrisya@gmail.com</td>
-        <td>0194229070</td>
-        <td>970321040822</td>
-        <td>No 42 Taman Sri Setia</td>
-        <td>Alza</td>
-        <td>26 Sept 2021</td>
-        <td>11:30 AM</td>
-        <td>29 Sept 2021</td>
-        <td>Kuala Lumpur</td>
-    </tr>
 
 </table>
 </body>
