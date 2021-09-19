@@ -2,40 +2,40 @@
 session_start();
 require '../connection.php';
 
-$idCustomer=$_POST["idCustomer"];
+$idcustomer=$_POST["idcustomer"];
 $name=$_POST["name"];
-$noTelefon=$_POST["noTelefon"];
+$notelefon=$_POST["notelefon"];
 $email=$_POST["email"];
-$noIC=$_POST["noIC"];
+$noic=$_POST["noic"];
 $alamat=$_POST["alamat"];
 
 //error checking
 
-if($idCustomer==""){
-	echo "<script>alert('Please Enter idCustomer');window.location='register.php'</script>";
+if($idcustomer==""){
+	echo "<script>alert('Please Enter idcustomer');window.location='register.php'</script>";
 }
 
 if($name==""){
-	echo "<script>alert('Please Enter name ');window.location='register.php'</script>";
+	echo "<script>alert('Please Enter name');window.location='register.php'</script>";
 }
 
-if($noTelefon==""){
+if($notelefon==""){
 	
-	echo "<script>alert('Please Enter noTelefon');window.location='register.php'</script>";
+	echo "<script>alert('Please Enter notelefon');window.location='register.php'</script>";
 }
 
 if($email==""){
 	echo "<script>alert('Please Enter email ');window.location='register.php'</script>";
 }
 
-if($noIC==""){
-	echo "<script>alert('Please Enter No IC');window.location='register.php'</script>";
+if($noic==""){
+	echo "<script>alert('Please Enter noic');window.location='register.php'</script>";
 }
 if($alamat==""){
 	echo "<script>alert('Please Enter alamat ');window.location='register.php'</script>";
 }
 
-$sql ="INSERT INTO customerlist(idCustomer,NamaPenyewa,NoTelefon,Email,NoIC,Alamat)VALUES('$idCustomer','$name','$noTelefon','$email','$noIC','$alamat')"; 
+$sql ="INSERT INTO customer(idcustomer,namapenyewa,notelefon,email,noic,alamat)VALUES('$idcustomer','$name','$notelefon','$email','$noic','$alamat')"; 
 
 if($conn->query($sql)=== TRUE){   //true --->successfully
 	echo "<script>alert('Register Add Successfully');window.location='index.php'</script>";

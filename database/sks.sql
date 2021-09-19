@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Sep 19, 2021 at 07:37 PM
+=======
+-- Generation Time: Sep 19, 2021 at 03:23 PM
+>>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -135,7 +139,11 @@ ALTER TABLE `kereta`
 -- AUTO_INCREMENT for table `tempahan`
 --
 ALTER TABLE `tempahan`
+<<<<<<< HEAD
   MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+=======
+  MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

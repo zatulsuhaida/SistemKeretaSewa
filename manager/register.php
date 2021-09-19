@@ -43,8 +43,8 @@ require '../connection.php';
                 </th>
             </tr>
             <tr>
-                <th>idCustomer :</th>
-                <td><input type="text" name="idCustomer" required></td>
+                <th>idcustomer :</th>
+                <td><input type="text" name="idcustomer" required></td>
             </tr>
             <tr>
                 <th>Nama Penyewa :</th>
@@ -52,7 +52,7 @@ require '../connection.php';
             </tr>
             <tr>
                 <th>No Telefon :</th>
-                <td><input type="text" name="noTelefon" required></td>
+                <td><input type="text" name="notelefon" required></td>
             </tr>
             <tr>
                 <th>Email :</th>
@@ -60,7 +60,7 @@ require '../connection.php';
             </tr>
             <tr>
                 <th>No IC :</th>
-                <td><input type="text" name="noIC" required></td>
+                <td><input type="text" name="noic" required></td>
             </tr>
             <tr>
                 <th>Alamat :</th>

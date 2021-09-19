@@ -2,8 +2,8 @@
 session_start();
 require '../connection.php';
 
-$idusr = $_GET["idCustomer"];
-$dis_usr = "SELECT * FROM customerlist WHERE idCustomer='$idusr'";
+$idusr = $_GET["idcustomer"];
+$dis_usr = "SELECT * FROM customer WHERE idcustomer='$idusr'";
 $resultusr = $conn->query($dis_usr);
 
 $row = $resultusr->fetch_assoc();
@@ -45,34 +45,34 @@ $row = $resultusr->fetch_assoc();
     <form name="myform" action="updatepro.php" method="post">
         <center>
             <br>
-            <b>idCustomer :</b>
-            <input type="text" name="idCustomer" value="<?php echo $row["idCustomer"]; ?>">
+            <b>idcustomer :</b>
+            <input type="text" name="idcustomer" readonly value="<?php echo $row["idcustomer"]; ?>">
             <br>
             <br>
             <b>Nama Penyewa :</b>
-            <input type="text" name="name" value="<?php echo $row["NamaPenyewa"]; ?>">
+            <input type="text" name="name" value="<?php echo $row["namapenyewa"]; ?>">
             <br>
             <br>
             <b>No Telefon:</b>
-            <input type="text" name="noTelefon" value="<?php echo $row["NoTelefon"]; ?>">
+            <input type="text" name="notelefon" value="<?php echo $row["notelefon"]; ?>">
             <br>
             <br>
             <b>Email :</b>
-            <input type="email" name="email" value="<?php echo $row["Email"]; ?>">
+            <input type="email" name="email" value="<?php echo $row["email"]; ?>">
             <br>
             <br>
             <b>No IC :</b>
-            <input type="text" name="noIC" value="<?php echo $row["NoIC"]; ?>">
+            <input type="text" name="noic" value="<?php echo $row["noic"]; ?>">
             <br>
             <br>
             <b>Alamat :</b>
-            <input type="text" name="alamat" value="<?php echo $row["Alamat"]; ?>">
+            <input type="text" name="alamat" value="<?php echo $row["alamat"]; ?>">
 
         </center>
         <br>
         <center>
             <input type="submit" value="Update" style="background-color:PaleGreen;font-size: 15px;" />
-            <input type="hidden" name="idCustomer" value="<?php echo $row["idCustomer"]; ?>" />
+            <input type="hidden" name="idcustomer" value="<?php echo $row["idcustomer"]; ?>" />
         </center>
     </form>
 </body>

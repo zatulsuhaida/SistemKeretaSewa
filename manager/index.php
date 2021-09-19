@@ -2,7 +2,7 @@
 session_start();
 require '../connection.php';
 
-$sql = "SELECT * FROM customerlist";
+$sql = "SELECT * FROM customer";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -40,7 +40,11 @@ $result = mysqli_query($conn, $sql);
 
     <table border="1">
         <tr>
+<<<<<<< HEAD
             <th>idCustomer</th>
+=======
+            <th>idcustomer</th>
+>>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
             <th>Nama Penyewa</th>
             <th>No Telefon</th>
             <th>Email</th>
@@ -57,6 +61,7 @@ $result = mysqli_query($conn, $sql);
         ?>
 
                 <tr>
+<<<<<<< HEAD
                     <td><?php echo $row["idCustomer"]; ?></td>
                     <td><?php echo $row["NamaPenyewa"]; ?></td>
                     <td><?php echo $row["NoTelefon"]; ?></td>
@@ -67,6 +72,18 @@ $result = mysqli_query($conn, $sql);
                     <td colspan="2">
                         <a href="update.php?idCustomer=<?php echo $row["idCustomer"]; ?>">Update</a>
                         <a href="delete.php?idCustomer=<?php echo $row["idCustomer"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+=======
+                    <td><?php echo $row["idcustomer"]; ?></td>
+                    <td><?php echo $row["namapenyewa"]; ?></td>
+                    <td><?php echo $row["notelefon"]; ?></td>
+                    <td><?php echo $row["email"]; ?></td>
+                    <td><?php echo $row["noic"]; ?></td>
+                    <td><?php echo $row["alamat"]; ?></td>
+
+                    <td colspan="2">
+                        <a href="update.php?idcustomer=<?php echo $row["idcustomer"]; ?>">Update</a>
+                        <a href="delete.php?idcustomer=<?php echo $row["idcustomer"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+>>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
                     </td>
                 </tr>
 
