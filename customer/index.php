@@ -45,11 +45,17 @@ $result = mysqli_query($conn, $sql);
     <tr> 
         <th>idtempahan</th>
         <th>idkereta</th>
-        <th>idcustomer</th>
+        <th>idmanager</th>
+        <th>namapenyewa</th>
+        <th>notelefon</th>
+        <th>email</th>
+        <th>noIC</th>
+        <th>alamat</th>
         <th>Tarikh Ambil</th> 
         <th>Masa Ambil</th> 
         <th>Tarikh Hantar</th> 
-        <th>Destinasi</th> 
+        <th>Destinasi</th>
+        <th>Action</th> 
     </tr> 
     <?php  
         if (mysqli_num_rows($result) > 0) {  
@@ -61,11 +67,21 @@ $result = mysqli_query($conn, $sql);
                 <tr>  
                     <td><?php echo $row["idtempahan"]; ?></td>
                     <td><?php echo $row["idkereta"]; ?></td>
-                    <td><?php echo $row["idcustomer"]; ?></td>
+                    <td><?php echo $row["idmanager"]; ?></td>
+                    <td><?php echo $row["namapenyewa"]; ?></td>
+                    <td><?php echo $row["notelefon"]; ?></td>
+                    <td><?php echo $row["email"]; ?></td>
+                    <td><?php echo $row["noIC"]; ?></td>
+                    <td><?php echo $row["alamat"]; ?></td>
                     <td><?php echo $row["tarikhambil"]; ?></td> 
                     <td><?php echo $row["masaambil"]; ?></td> 
                     <td><?php echo $row["tarikhhantar"]; ?></td> 
                     <td><?php echo $row["destinasi"]; ?></td>  
+
+                    <td colspan="2">
+                        <a href="update.php?idCustomer=<?php echo $row["idtempahan"]; ?>">Update</a>
+                        <a href="delete.php?idCustomer=<?php echo $row["idtempahan"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                    </td>
                 </tr>
                 
                 <?php 

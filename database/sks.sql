@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 10:56 AM
+-- Generation Time: Sep 19, 2021 at 12:25 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customerlist` (
-  `idCustomer` int(20) NOT NULL,
+  `idmanager` int(20) NOT NULL,
   `NamaPenyewa` varchar(50) NOT NULL,
   `NoTelefon` text NOT NULL,
   `Email` varchar(50) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `customerlist` (
 -- Dumping data for table `customerlist`
 --
 
-INSERT INTO `customerlist` (`idCustomer`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
+INSERT INTO `customerlist` (`idmanager`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
 (101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
 (123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya');
 
@@ -76,7 +76,12 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 CREATE TABLE `tempahan` (
   `idtempahan` int(30) NOT NULL,
   `idkereta` int(11) NOT NULL,
-  `idcustomer` int(11) NOT NULL,
+  `idmanager` int(11) NOT NULL,
+  `namapenyewa` varchar(20) NOT NULL,
+  `notelefon` int(11) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `noIC` int(20) NOT NULL,
+  `alamat` varchar(20) NOT NULL,
   `tarikhambil` date NOT NULL,
   `masaambil` varchar(20) NOT NULL,
   `tarikhhantar` date NOT NULL,
@@ -87,8 +92,8 @@ CREATE TABLE `tempahan` (
 -- Dumping data for table `tempahan`
 --
 
-INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
+INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idmanager`, `namapenyewa`, `notelefon`, `email`, `noIC`, `alamat`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
+(1, 1, 123456, 'Syakir Ridzuan', 175659039, 'syakir@gmail.com', 218020689, 'No 24 Taman Sri Jaya', '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
 -- Indexes for dumped tables
@@ -98,7 +103,7 @@ INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `
 -- Indexes for table `customerlist`
 --
 ALTER TABLE `customerlist`
-  ADD PRIMARY KEY (`idCustomer`);
+  ADD PRIMARY KEY (`idmanager`);
 
 --
 -- Indexes for table `kereta`
@@ -110,7 +115,9 @@ ALTER TABLE `kereta`
 -- Indexes for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  ADD PRIMARY KEY (`idtempahan`);
+  ADD PRIMARY KEY (`idtempahan`),
+  ADD KEY `test` (`idkereta`),
+  ADD KEY `cth` (`idmanager`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -120,7 +127,7 @@ ALTER TABLE `tempahan`
 -- AUTO_INCREMENT for table `customerlist`
 --
 ALTER TABLE `customerlist`
-  MODIFY `idCustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
+  MODIFY `idmanager` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
 
 --
 -- AUTO_INCREMENT for table `kereta`
@@ -133,6 +140,17 @@ ALTER TABLE `kereta`
 --
 ALTER TABLE `tempahan`
   MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tempahan`
+--
+ALTER TABLE `tempahan`
+  ADD CONSTRAINT `cth` FOREIGN KEY (`idmanager`) REFERENCES `customerlist` (`idmanager`),
+  ADD CONSTRAINT `test` FOREIGN KEY (`idkereta`) REFERENCES `kereta` (`idkereta`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
