@@ -65,8 +65,8 @@ $result = mysqli_query($conn, $sql);
                     <td><?php echo $row["Alamat"]; ?></td>
 
                     <td colspan="2">
-                        <a href="update.php?idCustomer=<?php echo $row["idCustomer"]; ?>">Update</a>
-                        <a href="delete.php?idCustomer=<?php echo $row["idCustomer"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                        <a href="update.php?idPelanggan=<?php echo $row["idCustomer"]; ?>">Update</a>
+                        <a href="delete.php?idPelanggan=<?php echo $row["idCustomer"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
                     </td>
                 </tr>
 
