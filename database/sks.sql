@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 12:36 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.3.29
+-- Generation Time: Sep 19, 2021 at 07:37 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,25 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customerlist`
+-- Table structure for table `customer`
 --
 
-CREATE TABLE `customerlist` (
-  `idmanager` int(20) NOT NULL,
-  `NamaPenyewa` varchar(50) NOT NULL,
-  `NoTelefon` text NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `NoIC` varchar(50) NOT NULL,
-  `Alamat` varchar(100) NOT NULL
+CREATE TABLE `customer` (
+  `idcustomer` int(20) NOT NULL,
+  `namapenyewa` varchar(50) NOT NULL,
+  `notelefon` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `noic` varchar(50) NOT NULL,
+  `alamat` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `customerlist`
+-- Dumping data for table `customer`
 --
 
-INSERT INTO `customerlist` (`idmanager`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
+INSERT INTO `customer` (`idcustomer`, `namapenyewa`, `notelefon`, `email`, `noic`, `alamat`) VALUES
 (101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
-(123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya');
+(123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya'),
+(888877, 'radzi', '01270464543', 'radzi@gmail.com', '00999897463', 'Jabi');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,9 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 (1, 'saga', 'RM 100', 'RM 700'),
 (2, 'Myvi', 'RM 80', 'RM 560'),
 (3, 'Alza', 'RM 120', 'RM 840'),
-(4, 'Axia', 'RM 60', 'RM 420');
+(4, 'Axia', 'RM 60', 'RM 420'),
+(5, 'proton', '80', '320'),
+(6, 'proton', '80', '320');
 
 -- --------------------------------------------------------
 
@@ -75,8 +78,8 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 
 CREATE TABLE `tempahan` (
   `idtempahan` int(30) NOT NULL,
-  `idkereta` int(11) NOT NULL,
-  `idmanager` int(11) NOT NULL,
+  `idkereta` int(10) NOT NULL,
+  `idcustomer` int(10) NOT NULL,
   `tarikhambil` date NOT NULL,
   `masaambil` varchar(20) NOT NULL,
   `tarikhhantar` date NOT NULL,
@@ -87,7 +90,7 @@ CREATE TABLE `tempahan` (
 -- Dumping data for table `tempahan`
 --
 
-INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idmanager`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
+INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
 (1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
@@ -95,10 +98,10 @@ INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idmanager`, `tarikhambil`, `m
 --
 
 --
--- Indexes for table `customerlist`
+-- Indexes for table `customer`
 --
-ALTER TABLE `customerlist`
-  ADD PRIMARY KEY (`idmanager`);
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`idcustomer`);
 
 --
 -- Indexes for table `kereta`
@@ -110,42 +113,29 @@ ALTER TABLE `kereta`
 -- Indexes for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  ADD PRIMARY KEY (`idtempahan`),
-  ADD KEY `test` (`idkereta`),
-  ADD KEY `cth` (`idmanager`);
+  ADD PRIMARY KEY (`idtempahan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `customerlist`
+-- AUTO_INCREMENT for table `customer`
 --
-ALTER TABLE `customerlist`
-  MODIFY `idmanager` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
+ALTER TABLE `customer`
+  MODIFY `idcustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=888878;
 
 --
 -- AUTO_INCREMENT for table `kereta`
 --
 ALTER TABLE `kereta`
-  MODIFY `idkereta` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idkereta` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `tempahan`
---
-ALTER TABLE `tempahan`
-  ADD CONSTRAINT `cth` FOREIGN KEY (`idmanager`) REFERENCES `customerlist` (`idmanager`),
-  ADD CONSTRAINT `test` FOREIGN KEY (`idkereta`) REFERENCES `kereta` (`idkereta`);
+  MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
