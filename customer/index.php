@@ -46,11 +46,6 @@ $result = mysqli_query($conn, $sql);
         <th>idtempahan</th>
         <th>idkereta</th>
         <th>idmanager</th>
-        <th>namapenyewa</th>
-        <th>notelefon</th>
-        <th>email</th>
-        <th>noIC</th>
-        <th>alamat</th>
         <th>Tarikh Ambil</th> 
         <th>Masa Ambil</th> 
         <th>Tarikh Hantar</th> 
@@ -68,11 +63,6 @@ $result = mysqli_query($conn, $sql);
                     <td><?php echo $row["idtempahan"]; ?></td>
                     <td><?php echo $row["idkereta"]; ?></td>
                     <td><?php echo $row["idmanager"]; ?></td>
-                    <td><?php echo $row["namapenyewa"]; ?></td>
-                    <td><?php echo $row["notelefon"]; ?></td>
-                    <td><?php echo $row["email"]; ?></td>
-                    <td><?php echo $row["noIC"]; ?></td>
-                    <td><?php echo $row["alamat"]; ?></td>
                     <td><?php echo $row["tarikhambil"]; ?></td> 
                     <td><?php echo $row["masaambil"]; ?></td> 
                     <td><?php echo $row["tarikhhantar"]; ?></td> 
