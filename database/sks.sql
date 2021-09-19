@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 05:56 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Sep 19, 2021 at 09:51 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,28 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `sks`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `customerlist`
---
-
-CREATE TABLE `customerlist` (
-  `idCustomer` int(20) NOT NULL,
-  `NamaPenyewa` varchar(50) NOT NULL,
-  `NoTelefon` text NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `NoIC` varchar(50) NOT NULL,
-  `Alamat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `customerlist`
---
-
-INSERT INTO `customerlist` (`idCustomer`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
-(123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya');
 
 -- --------------------------------------------------------
 
@@ -62,9 +39,10 @@ CREATE TABLE `kereta` (
 --
 
 INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
-(1, 'saga', 'RM 100', 'RM 709'),
+(1, 'saga', 'RM 100', 'RM 700'),
 (2, 'Myvi', 'RM 80', 'RM 560'),
-(3, 'Alza', 'RM 120', 'RM 840');
+(3, 'Alza', 'RM 120', 'RM 840'),
+(4, 'Axia', 'RM 60', 'RM 420');
 
 -- --------------------------------------------------------
 
@@ -73,12 +51,14 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 --
 
 CREATE TABLE `tempahan` (
-  `idtempahan` int(10) NOT NULL,
-  `namapenyewa` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `idtempahan` int(30) NOT NULL,
+  `idkereta` int(11) NOT NULL,
+  `idcustomer` int(11) NOT NULL,
+  `namapenyewa` varchar(30) NOT NULL,
   `notelefon` int(10) NOT NULL,
-  `email` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(20) NOT NULL,
   `noIC` int(20) NOT NULL,
-  `alamat` varchar(30) NOT NULL,
+  `alamat` varchar(20) NOT NULL,
   `jeniskereta` varchar(10) NOT NULL,
   `tarikhambil` varchar(20) NOT NULL,
   `masaambil` varchar(20) NOT NULL,
@@ -90,19 +70,13 @@ CREATE TABLE `tempahan` (
 -- Dumping data for table `tempahan`
 --
 
-INSERT INTO `tempahan` (`idtempahan`, `namapenyewa`, `notelefon`, `email`, `noIC`, `alamat`, `jeniskereta`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 'Syakir Ridzuan', 175659039, 'syakir@gmail.com', 218020689, 'No 24 Taman Sri Jaya', 'Myvi', '18 Jun 2021', '8:30 AM', '20 Jun 2021', 'Penang'),
-(2, 'Kamarul Nizam', 115659039, 'nizam@gmail.com', 218020689, 'No 24 Taman Sri Jaya', 'Myvi', '18 Jun 2021', '8:30 AM', '20 Jun 2021', 'Penang');
+INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `namapenyewa`, `notelefon`, `email`, `noIC`, `alamat`, `jeniskereta`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
+(1, 1, 123456, 'Syakir Ridzuan', 175659039, 'syakir@gmail.com', 218020689, 'No 24 Taman Sri Jaya', 'Myvi', '18 Jun 2021', '8:30 AM', '20 Jun 2021', 'Penang'),
+(2, 0, 0, 'Kamarul Nizam', 115659039, 'nizam@gmail.com', 224140687, 'No 24 Taman Mawar', 'Saga', '18 July 2021', '8:30 AM', '20 July 2021', 'Selangor');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `customerlist`
---
-ALTER TABLE `customerlist`
-  ADD PRIMARY KEY (`idCustomer`);
 
 --
 -- Indexes for table `kereta`
@@ -121,12 +95,6 @@ ALTER TABLE `tempahan`
 --
 
 --
--- AUTO_INCREMENT for table `customerlist`
---
-ALTER TABLE `customerlist`
-  MODIFY `idCustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
-
---
 -- AUTO_INCREMENT for table `kereta`
 --
 ALTER TABLE `kereta`
@@ -136,7 +104,7 @@ ALTER TABLE `kereta`
 -- AUTO_INCREMENT for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  MODIFY `idtempahan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
