@@ -48,16 +48,16 @@ $result = mysqli_query($conn, $sql);
                 <th>idtempahan</th>
                 <th>idkereta</th>
                 <th>idCustomer</th>
-                <th>Nama Penyewa</th>
-                <th>No Telefon</th>
-                <th>Email</th>
-                <th>No IC</th>
-                <th>Alamat</th>
-                <th>Tarikh Ambil</th>
-                <th>Masa Ambil</th>
-                <th>Tarikh Hantar</th>
-                <th>Destinasi</th>
-                <th>Action</th>
+                <th>nama penyewa</th>
+                <th>no telefon</th>
+                <th>email</th>
+                <th>no ic</th>
+                <th>alamat</th>
+                <th>tarikh ambil</th>
+                <th>masa ambil</th>
+                <th>tarikh hantar</th>
+                <th>testinasi</th>
+                <th>action</th>
             </tr>
             <?php
             if (mysqli_num_rows($result) > 0) {
@@ -70,11 +70,11 @@ $result = mysqli_query($conn, $sql);
                         <td><?php echo $row["idtempahan"]; ?></td>
                         <td><?php echo $row["idkereta"]; ?></td>
                         <td><?php echo $row["idcustomer"]; ?></td>
-                        <td><?php echo $row["NamaPenyewa"]; ?></td>
-                        <td><?php echo $row["NoTelefon"]; ?></td>
-                        <td><?php echo $row["Email"]; ?></td>
-                        <td><?php echo $row["NoIC"]; ?></td>
-                        <td><?php echo $row["Alamat"]; ?></td>
+                        <td><?php echo $row["namapenyewa"]; ?></td>
+                        <td><?php echo $row["notelefon"]; ?></td>
+                        <td><?php echo $row["email"]; ?></td>
+                        <td><?php echo $row["noic"]; ?></td>
+                        <td><?php echo $row["alamat"]; ?></td>
                         <td><?php echo $row["tarikhambil"]; ?></td>
                         <td><?php echo $row["masaambil"]; ?></td>
                         <td><?php echo $row["tarikhhantar"]; ?></td>

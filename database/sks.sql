@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 01:28 PM
+-- Generation Time: Sep 19, 2021 at 02:25 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -24,25 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customerlist`
+-- Table structure for table `customer`
 --
 
-CREATE TABLE `customerlist` (
-  `idCustomer` int(20) NOT NULL,
-  `NamaPenyewa` varchar(50) NOT NULL,
-  `NoTelefon` text NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `NoIC` varchar(50) NOT NULL,
-  `Alamat` varchar(100) NOT NULL
+CREATE TABLE `customer` (
+  `idcustomer` int(10) NOT NULL,
+  `namapenyewa` varchar(50) NOT NULL,
+  `notelefon` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `noic` varchar(20) NOT NULL,
+  `alamat` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `customerlist`
---
-
-INSERT INTO `customerlist` (`idCustomer`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
-(101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
-(123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya');
 
 -- --------------------------------------------------------
 
@@ -75,8 +67,8 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 
 CREATE TABLE `tempahan` (
   `idtempahan` int(30) NOT NULL,
-  `idkereta` int(11) NOT NULL,
-  `idcustomer` int(11) NOT NULL,
+  `idkereta` int(10) NOT NULL,
+  `idcustomer` int(10) NOT NULL,
   `tarikhambil` date NOT NULL,
   `masaambil` varchar(20) NOT NULL,
   `tarikhhantar` date NOT NULL,
@@ -88,17 +80,17 @@ CREATE TABLE `tempahan` (
 --
 
 INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
+(1, 0, 0, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `customerlist`
+-- Indexes for table `customer`
 --
-ALTER TABLE `customerlist`
-  ADD PRIMARY KEY (`idCustomer`);
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`idcustomer`);
 
 --
 -- Indexes for table `kereta`
@@ -110,19 +102,17 @@ ALTER TABLE `kereta`
 -- Indexes for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  ADD PRIMARY KEY (`idtempahan`),
-  ADD KEY `test` (`idkereta`),
-  ADD KEY `cth` (`idcustomer`);
+  ADD PRIMARY KEY (`idtempahan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `customerlist`
+-- AUTO_INCREMENT for table `customer`
 --
-ALTER TABLE `customerlist`
-  MODIFY `idCustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
+ALTER TABLE `customer`
+  MODIFY `idcustomer` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kereta`
@@ -135,17 +125,6 @@ ALTER TABLE `kereta`
 --
 ALTER TABLE `tempahan`
   MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `tempahan`
---
-ALTER TABLE `tempahan`
-  ADD CONSTRAINT `cth` FOREIGN KEY (`idCustomer`) REFERENCES `customerlist` (`idCustomer`),
-  ADD CONSTRAINT `test` FOREIGN KEY (`idkereta`) REFERENCES `kereta` (`idkereta`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
