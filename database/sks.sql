@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 10:56 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.3.29
+-- Generation Time: Sep 19, 2021 at 01:15 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -76,7 +76,7 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 CREATE TABLE `tempahan` (
   `idtempahan` int(30) NOT NULL,
   `idkereta` int(11) NOT NULL,
-  `idcustomer` int(11) NOT NULL,
+  `idCustomer` int(11) NOT NULL,
   `tarikhambil` date NOT NULL,
   `masaambil` varchar(20) NOT NULL,
   `tarikhhantar` date NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE `tempahan` (
 -- Dumping data for table `tempahan`
 --
 
-INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
+INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idCustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
 (1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
@@ -110,7 +110,9 @@ ALTER TABLE `kereta`
 -- Indexes for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  ADD PRIMARY KEY (`idtempahan`);
+  ADD PRIMARY KEY (`idtempahan`),
+  ADD KEY `test` (`idkereta`),
+  ADD KEY `cth` (`idCustomer`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -133,6 +135,17 @@ ALTER TABLE `kereta`
 --
 ALTER TABLE `tempahan`
   MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tempahan`
+--
+ALTER TABLE `tempahan`
+  ADD CONSTRAINT `cth` FOREIGN KEY (`idCustomer`) REFERENCES `customerlist` (`idCustomer`),
+  ADD CONSTRAINT `test` FOREIGN KEY (`idkereta`) REFERENCES `kereta` (`idkereta`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
