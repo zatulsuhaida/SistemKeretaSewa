@@ -38,7 +38,7 @@ if($alamat==""){
 $sql ="INSERT INTO customerlist(idCustomer,NamaPenyewa,NoTelefon,Email,NoIC,Alamat)VALUES('$idCustomer','$name','$noTelefon','$email','$noIC','$alamat')"; 
 
 if($conn->query($sql)=== TRUE){   //true --->successfully
-	echo "<script>alert('Register Add Successfully');window.location='listcustomer.php'</script>";
+	echo "<script>alert('Register Add Successfully');window.location='index.php'</script>";
 }
 else{
 	echo "Error:". $sql."<br>".$conn->error;

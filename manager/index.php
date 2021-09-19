@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $sql);
     <pre>
     <center> 
         <h2> Customer List</h2> 
-        <br> Nama Programmer: <a href="manager/">Manager (Radzi)</a> 
+        <br> Nama Programmer: <a>Manager (Radzi)</a> 
     </center> 
     </pre>
     <nav style="background-color: hotpink">
@@ -29,7 +29,7 @@ $result = mysqli_query($conn, $sql);
         [
         <a class="active" href="../index.php">Home</a>
         |
-        <a href="listcustomer.php">Customer List </a>
+        <a href="index.php">Customer List </a>
         |
         <a href="register.php">Register Customer</a>
         |
@@ -40,7 +40,7 @@ $result = mysqli_query($conn, $sql);
 
     <table border="1">
         <tr>
-            <th>idCustomer</th>
+            <th>idmanager</th>
             <th>Nama Penyewa</th>
             <th>No Telefon</th>
             <th>Email</th>
@@ -57,7 +57,7 @@ $result = mysqli_query($conn, $sql);
         ?>
 
                 <tr>
-                    <td><?php echo $row["idCustomer"]; ?></td>
+                    <td><?php echo $row["idmanager"]; ?></td>
                     <td><?php echo $row["NamaPenyewa"]; ?></td>
                     <td><?php echo $row["NoTelefon"]; ?></td>
                     <td><?php echo $row["Email"]; ?></td>
@@ -65,8 +65,8 @@ $result = mysqli_query($conn, $sql);
                     <td><?php echo $row["Alamat"]; ?></td>
 
                     <td colspan="2">
-                        <a href="update.php?idCustomer=<?php echo $row["idCustomer"]; ?>">Update</a>
-                        <a href="delete.php?idCustomer=<?php echo $row["idCustomer"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                        <a href="update.php?idmanager=<?php echo $row["idmanager"]; ?>">Update</a>
+                        <a href="delete.php?idmanager=<?php echo $row["idmanager"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
                     </td>
                 </tr>
 
