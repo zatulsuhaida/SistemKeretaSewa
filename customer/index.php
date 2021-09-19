@@ -46,11 +46,6 @@ $result = mysqli_query($conn, $sql);
         <th>idtempahan</th>
         <th>idkereta</th>
         <th>idCustomer</th>
-        <th>Nama Penyewa</th>
-        <th>No Telefon</th>
-        <th>Email</th>
-        <th>No IC</th>
-        <th>Alamat</th>
         <th>Tarikh Ambil</th> 
         <th>Masa Ambil</th> 
         <th>Tarikh Hantar</th> 
