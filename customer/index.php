@@ -45,16 +45,12 @@ $result = mysqli_query($conn, $sql);
     <tr> 
         <th>idtempahan</th>
         <th>idkereta</th>
-<<<<<<< HEAD
         <th>idCustomer</th>
-=======
-        <th>idmanager</th>
         <th>Nama Penyewa</th>
         <th>No Telefon</th>
         <th>Email</th>
         <th>No IC</th>
         <th>Alamat</th>
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
         <th>Tarikh Ambil</th> 
         <th>Masa Ambil</th> 
         <th>Tarikh Hantar</th> 
@@ -71,16 +67,7 @@ $result = mysqli_query($conn, $sql);
                 <tr>  
                     <td><?php echo $row["idtempahan"]; ?></td>
                     <td><?php echo $row["idkereta"]; ?></td>
-<<<<<<< HEAD
                     <td><?php echo $row["idCustomer"]; ?></td>
-=======
-                    <td><?php echo $row["idmanager"]; ?></td>
-                    <td><?php echo $row["NamaPenyewa"]; ?></td>
-                    <td><?php echo $row["NoTelefon"]; ?></td>
-                    <td><?php echo $row["Email"]; ?></td>
-                    <td><?php echo $row["NoIC"]; ?></td>
-                    <td><?php echo $row["Alamat"]; ?></td>
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
                     <td><?php echo $row["tarikhambil"]; ?></td> 
                     <td><?php echo $row["masaambil"]; ?></td> 
                     <td><?php echo $row["tarikhhantar"]; ?></td> 
