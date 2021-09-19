@@ -2,9 +2,9 @@
 session_start();
 require '../connection.php';
 
-$sql = "SELECT * FROM tempahan";
-$sql = "SELECT * FROM kereta";
-$sql = "SELECT * FROM customer";
+$sql = "SELECT * FROM tempahan
+JOIN customer ON tempahan.idcustomer = customer.idcustomer
+JOIN kereta ON tempahan.idkereta = kereta.idkereta";
 $result = mysqli_query($conn, $sql);
 ?>
 
