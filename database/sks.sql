@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 09:51 AM
+-- Generation Time: Sep 19, 2021 at 10:17 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `sks`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customerlist`
+--
+
+CREATE TABLE `customerlist` (
+  `idCustomer` int(20) NOT NULL,
+  `NamaPenyewa` varchar(50) NOT NULL,
+  `NoTelefon` text NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `NoIC` varchar(50) NOT NULL,
+  `Alamat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customerlist`
+--
+
+INSERT INTO `customerlist` (`idCustomer`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
+(101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
+(123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya');
 
 -- --------------------------------------------------------
 
@@ -79,6 +102,12 @@ INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `namapenyewa`, `
 --
 
 --
+-- Indexes for table `customerlist`
+--
+ALTER TABLE `customerlist`
+  ADD PRIMARY KEY (`idCustomer`);
+
+--
 -- Indexes for table `kereta`
 --
 ALTER TABLE `kereta`
@@ -93,6 +122,12 @@ ALTER TABLE `tempahan`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `customerlist`
+--
+ALTER TABLE `customerlist`
+  MODIFY `idCustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
 
 --
 -- AUTO_INCREMENT for table `kereta`
