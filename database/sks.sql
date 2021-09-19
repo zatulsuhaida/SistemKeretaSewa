@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 02:25 PM
+-- Generation Time: Sep 19, 2021 at 03:23 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -28,13 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
-  `idcustomer` int(10) NOT NULL,
+  `idcustomer` int(20) NOT NULL,
   `namapenyewa` varchar(50) NOT NULL,
   `notelefon` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `noic` varchar(20) NOT NULL,
+  `noic` varchar(50) NOT NULL,
   `alamat` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`idcustomer`, `namapenyewa`, `notelefon`, `email`, `noic`, `alamat`) VALUES
+(101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
+(123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya'),
+(888877, 'radzi', '01270464543', 'radzi@gmail.com', '00999897463', 'Jabi');
 
 -- --------------------------------------------------------
 
@@ -80,7 +89,7 @@ CREATE TABLE `tempahan` (
 --
 
 INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 0, 0, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
+(1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
 -- Indexes for dumped tables
@@ -112,7 +121,7 @@ ALTER TABLE `tempahan`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `idcustomer` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idcustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=888878;
 
 --
 -- AUTO_INCREMENT for table `kereta`
