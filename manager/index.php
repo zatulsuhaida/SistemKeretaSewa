@@ -11,26 +11,55 @@
 
 <body>
     <pre>
-    <center>
-        <h1>Nama Sistem : Sistem Kereta Sewa (SKS)</h1>
-        <p>Nama Programmer : <a href="radzi.php">Manager (Radzi)</a></p>
-    </center>
+    <center> 
+        <h2> Customer List</h2> 
+        <br> Nama Programmer: <a href="manager/">Manager (Radzi)</a> 
+    </center> 
     </pre>
-    <nav>
-        <div>
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="sk.php">Senarai Maklumat Customer</a></li>
-                <li><a href="dk.php">Daftar Customer</a></li>
-                <li><a href="sp.php">Set Password</a></li>
-                <li><a href="../index.php">Log out</a></li>
-            </ul>
-        </div>
+    <nav style="background-color: hotpink">
+        <strong style="font-size: xx-large"></strong>
+        [
+        <a class="active" href="../index.php">Home</a>
+        |
+        <a href="listcustomer.php">Customer List </a>
+        |
+        <a href="register.php">Register Customer</a>
+
+        |
+        <a href="../index.php">Log out</a>
+        ]
     </nav>
     <br>
-    <p><b>Senarai Maklumat Customer</b></p>
-    <hr>
-    </hr>
+
+    <table border="1">
+        <tr>
+            <th>idPelanggan</th>
+            <th>idtempahan</th>
+            <th>Nama Penyewa</th>
+            <th>No Telefon</th>
+            <th>Email</th>
+            <th>No IC</th>
+            <th>Alamat</th>
+            <th>Jenis Kereta</th>
+            <th>Tarikh Ambil</th>
+            <th>Tarikh Hantar</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <th>1000</th>
+            <th>1</th>
+            <th>Syakir</th>
+            <th>0175659039</th>
+            <th>syakir@gmail.com</th>
+            <th>00218020689</th>
+            <th>No 24 Taman Sri Jaya</th>
+            <th>Myvi</th>
+            <th>18 Jun 2021</th>
+            <th>20 Jun 2021</th>
+            <th></th>
+        </tr>
+
+    </table>
 
 </body>
 
