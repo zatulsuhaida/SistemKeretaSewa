@@ -33,7 +33,7 @@
 
     <table border="1">
         <tr>
-            <th>idPelanggan</th>
+            <th>idCustomer</th>
             <th>Nama Penyewa</th>
             <th>No Telefon</th>
             <th>Email</th>
