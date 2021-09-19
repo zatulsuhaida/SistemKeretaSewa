@@ -46,7 +46,7 @@ $row = $resultusr->fetch_assoc();
         <center>
             <br>
             <b>idcustomer :</b>
-            <input type="text" name="idcustomer" value="<?php echo $row["idcustomer"]; ?>">
+            <input type="text" name="idcustomer" readonly value="<?php echo $row["idcustomer"]; ?>">
             <br>
             <br>
             <b>Nama Penyewa :</b>

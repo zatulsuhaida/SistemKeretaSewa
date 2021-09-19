@@ -16,7 +16,7 @@ if($idcustomer==""){
 }
 
 if($name==""){
-	echo "<script>alert('Please Enter name ');window.location='register.php'</script>";
+	echo "<script>alert('Please Enter name');window.location='register.php'</script>";
 }
 
 if($notelefon==""){
