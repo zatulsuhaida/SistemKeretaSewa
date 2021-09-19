@@ -2,7 +2,7 @@
 session_start();
 require '../connection.php';
 
-$sql = "SELECT * FROM customerlist";
+$sql = "SELECT * FROM customer";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -40,7 +40,7 @@ $result = mysqli_query($conn, $sql);
 
     <table border="1">
         <tr>
-            <th>idmanager</th>
+            <th>idcustomer</th>
             <th>Nama Penyewa</th>
             <th>No Telefon</th>
             <th>Email</th>
@@ -57,16 +57,16 @@ $result = mysqli_query($conn, $sql);
         ?>
 
                 <tr>
-                    <td><?php echo $row["idmanager"]; ?></td>
-                    <td><?php echo $row["NamaPenyewa"]; ?></td>
-                    <td><?php echo $row["NoTelefon"]; ?></td>
-                    <td><?php echo $row["Email"]; ?></td>
-                    <td><?php echo $row["NoIC"]; ?></td>
-                    <td><?php echo $row["Alamat"]; ?></td>
+                    <td><?php echo $row["idcustomer"]; ?></td>
+                    <td><?php echo $row["namapenyewa"]; ?></td>
+                    <td><?php echo $row["notelefon"]; ?></td>
+                    <td><?php echo $row["email"]; ?></td>
+                    <td><?php echo $row["noic"]; ?></td>
+                    <td><?php echo $row["alamat"]; ?></td>
 
                     <td colspan="2">
-                        <a href="update.php?idmanager=<?php echo $row["idmanager"]; ?>">Update</a>
-                        <a href="delete.php?idmanager=<?php echo $row["idmanager"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                        <a href="update.php?idcustomer=<?php echo $row["idcustomer"]; ?>">Update</a>
+                        <a href="delete.php?idcustomer=<?php echo $row["idcustomer"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
                     </td>
                 </tr>
 

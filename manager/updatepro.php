@@ -2,14 +2,14 @@
 session_start();  
 require '../connection.php';  
   
-$idCustomer=$_POST["idCustomer"];
+$idcustomer=$_POST["idcustomer"];
 $name=$_POST["name"];
-$noTelefon=$_POST["noTelefon"];
+$notelefon=$_POST["notelefon"];
 $email=$_POST["email"];
-$noIC=$_POST["noIC"];
+$noic=$_POST["noic"];
 $alamat=$_POST["alamat"]; //drp input hndden  
   
-$sql = "UPDATE customerlist SET idCustomer='$idCustomer',NamaPenyewa='$name',NoTelefon='$noTelefon' ,Email='$email',NoIC='$noIC',Alamat='$alamat' where idCustomer='$idCustomer'";  
+$sql = "UPDATE customer SET idcustomer='$idcustomer',namapenyewa='$name',notelefon='$notelefon' ,email='$email',noic='$noic',alamat='$alamat' where idcustomer='$idcustomer'";  
   
 if($conn->query($sql)=== TRUE){   //true --->successfully  
   echo "<script>alert('Update Successfully');window.location='index.php'</script>";  

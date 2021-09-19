@@ -1,9 +1,9 @@
 <?php 
 require '../connection.php'; 
  
-$idCustomer = $_GET['idCustomer']; 
+$idcustomer = $_GET['idcustomer']; 
  
-$deleteusr = "DELETE FROM customerlist WHERE idCustomer='$idCustomer'"; 
+$deleteusr = "DELETE FROM customer WHERE idcustomer='$idcustomer'"; 
 $resultdelete -= $conn->query($deleteusr); 
  
 ?> 

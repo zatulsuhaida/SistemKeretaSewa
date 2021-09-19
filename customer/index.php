@@ -4,7 +4,7 @@ require '../connection.php';
 
 $sql = "SELECT * FROM tempahan";
 $sql = "SELECT * FROM kereta";
-$sql = "SELECT * FROM customerlist";
+$sql = "SELECT * FROM customer";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -56,7 +56,7 @@ $result = mysqli_query($conn, $sql);
                 <th>tarikh ambil</th>
                 <th>masa ambil</th>
                 <th>tarikh hantar</th>
-                <th>testinasi</th>
+                <th>destinasi</th>
                 <th>action</th>
             </tr>
             <?php
@@ -81,8 +81,8 @@ $result = mysqli_query($conn, $sql);
                         <td><?php echo $row["destinasi"]; ?></td>
 
                         <td colspan="2">
-                            <a href="update.php?idCustomer=<?php echo $row["idtempahan"]; ?>">Update</a>
-                            <a href="delete.php?idCustomer=<?php echo $row["idtempahan"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                            <a href="update.php?idcustomer=<?php echo $row["idtempahan"]; ?>">Update</a>
+                            <a href="delete.php?idcustomer=<?php echo $row["idtempahan"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
                         </td>
                     </tr>
 
