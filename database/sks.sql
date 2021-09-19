@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 10:21 AM
+-- Generation Time: Sep 19, 2021 at 10:56 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -77,15 +77,9 @@ CREATE TABLE `tempahan` (
   `idtempahan` int(30) NOT NULL,
   `idkereta` int(11) NOT NULL,
   `idcustomer` int(11) NOT NULL,
-  `namapenyewa` varchar(30) NOT NULL,
-  `notelefon` int(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `noIC` int(20) NOT NULL,
-  `alamat` varchar(20) NOT NULL,
-  `jeniskereta` varchar(10) NOT NULL,
-  `tarikhambil` varchar(20) NOT NULL,
+  `tarikhambil` date NOT NULL,
   `masaambil` varchar(20) NOT NULL,
-  `tarikhhantar` varchar(20) NOT NULL,
+  `tarikhhantar` date NOT NULL,
   `destinasi` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -93,8 +87,8 @@ CREATE TABLE `tempahan` (
 -- Dumping data for table `tempahan`
 --
 
-INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `namapenyewa`, `notelefon`, `email`, `noIC`, `alamat`, `jeniskereta`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 1, 123456, 'Syakir Ridzuan', 175659039, 'syakir@gmail.com', 218020689, 'No 24 Taman Sri Jaya', 'Myvi', '18 Jun 2021', '8:30 AM', '20 Jun 2021', 'Penang');
+INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
+(1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
 -- Indexes for dumped tables
