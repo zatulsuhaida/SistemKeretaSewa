@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $sql);
     <pre>
     <center> 
         <h2> Customer List</h2> 
-        <br> Nama Programmer: <a href="manager/">Manager (Radzi)</a> 
+        <br> Nama Programmer: <a>Manager (Radzi)</a> 
     </center> 
     </pre>
     <nav style="background-color: hotpink">
@@ -29,7 +29,7 @@ $result = mysqli_query($conn, $sql);
         [
         <a class="active" href="../index.php">Home</a>
         |
-        <a href="listcustomer.php">Customer List </a>
+        <a href="index.php">Customer List </a>
         |
         <a href="register.php">Register Customer</a>
         |

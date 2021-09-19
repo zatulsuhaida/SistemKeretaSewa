@@ -12,7 +12,7 @@ $alamat=$_POST["alamat"]; //drp input hndden
 $sql = "UPDATE customerlist SET idCustomer='$idCustomer',NamaPenyewa='$name',NoTelefon='$noTelefon' ,Email='$email',NoIC='$noIC',Alamat='$alamat' where idCustomer='$idCustomer'";  
   
 if($conn->query($sql)=== TRUE){   //true --->successfully  
-  echo "<script>alert('Update Successfully');window.location='listcustomer.php'</script>";  
+  echo "<script>alert('Update Successfully');window.location='index.php'</script>";  
 }  
 else{  
  echo "Error:". $sql."<br>".$conn->error;  

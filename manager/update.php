@@ -21,7 +21,7 @@ $row = $resultusr->fetch_assoc();
         <div class="center">
             <h2>Sistem Kereta Sewa</h2>
         </div>
-        <center><br> Nama Programmer: <a href="manager/">Manager (Radzi)</a></center>
+        <center><br> Nama Programmer: <a>Manager (Radzi)</a></center>
     </div>
 
     <nav style="background-color: hotpink">
@@ -29,7 +29,7 @@ $row = $resultusr->fetch_assoc();
         [
         <a class="active" href="../index.php">Home</a>
         |
-        <a href="listcustomer.php">Customer List </a>
+        <a href="index.php">Customer List </a>
         |
         <a href="register.php">Register Customer</a>
         |

@@ -18,7 +18,7 @@ require '../connection.php';
     <pre>
     <center> 
         <h2> Daftar Customer</h2> 
-        <br> Nama Programmer: <a href="manager/">Manager (Radzi)</a> 
+        <br> Nama Programmer: <a>Manager (Radzi)</a> 
     </center> 
     </pre>
     <nav style="background-color: hotpink">
@@ -26,7 +26,7 @@ require '../connection.php';
         [
         <a class="active" href="../index.php">Home</a>
         |
-        <a href="listcustomer.php">Customer List </a>
+        <a href="index.php">Customer List </a>
         |
         <a href="register.php">Register Customer</a>
         |

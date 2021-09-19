@@ -9,5 +9,5 @@ $resultdelete -= $conn->query($deleteusr);
 ?> 
  
 <script> 
-    window.location = "listcustomer.php"; 
+    window.location = "index.php"; 
 </script>
