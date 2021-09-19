@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 10:17 AM
+-- Generation Time: Sep 19, 2021 at 10:21 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -94,8 +94,7 @@ CREATE TABLE `tempahan` (
 --
 
 INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `namapenyewa`, `notelefon`, `email`, `noIC`, `alamat`, `jeniskereta`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 1, 123456, 'Syakir Ridzuan', 175659039, 'syakir@gmail.com', 218020689, 'No 24 Taman Sri Jaya', 'Myvi', '18 Jun 2021', '8:30 AM', '20 Jun 2021', 'Penang'),
-(2, 0, 0, 'Kamarul Nizam', 115659039, 'nizam@gmail.com', 224140687, 'No 24 Taman Mawar', 'Saga', '18 July 2021', '8:30 AM', '20 July 2021', 'Selangor');
+(1, 1, 123456, 'Syakir Ridzuan', 175659039, 'syakir@gmail.com', 218020689, 'No 24 Taman Sri Jaya', 'Myvi', '18 Jun 2021', '8:30 AM', '20 Jun 2021', 'Penang');
 
 --
 -- Indexes for dumped tables
