@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql);
         </div> 
         <center> 
             <h1>Nama sistem: Sistem Kereta Sewa (SKS)</h1><br> 
-            <br> Nama Programmer: <a href="syakir.php/">Customer (Syakir)</a> 
+            <br> Nama Programmer: <a>Customer (Syakir)</a> 
         </center> 
         <br> 
         <p><b>Senarai Maklumat Tempahan</b></p> 
