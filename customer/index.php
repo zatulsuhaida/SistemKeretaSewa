@@ -37,15 +37,9 @@ $result = mysqli_query($conn, $sql);
             [
             <a href="../index.php">Home</a>
             |
-<<<<<<< HEAD
             <a href="index.php">Senarai Maklumat Tempahan</a>
             |
             <a href="register.php">Daftar Tempahan</a>
-=======
-            <a href="index.php?menu=SenaraiMaklumatTempahan">Senarai Maklumat Tempahan</a>
-            |
-            <a href="daftar.php?menu=DaftarTempahan">Daftar Tempahan</a>
->>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
             ]
         </nav>
 
@@ -53,11 +47,7 @@ $result = mysqli_query($conn, $sql);
             <tr>
                 <th>idtempahan</th>
                 <th>idkereta</th>
-<<<<<<< HEAD
                 <th>idcustomer</th>
-=======
-                <th>idCustomer</th>
->>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
                 <th>nama penyewa</th>
                 <th>no telefon</th>
                 <th>email</th>
@@ -70,12 +60,7 @@ $result = mysqli_query($conn, $sql);
                 <th>action</th>
             </tr>
             <?php
-<<<<<<< HEAD
             if (mysqli_num_rows($result)) {
-=======
-            if (mysqli_num_rows($result) > 0) {
-
->>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
 
                 while ($row = mysqli_fetch_assoc($result)) {
             ?>
@@ -95,13 +80,8 @@ $result = mysqli_query($conn, $sql);
                         <td><?php echo $row["destinasi"]; ?></td>
 
                         <td colspan="2">
-<<<<<<< HEAD
                             <a href="update.php?idtempahan=<?php echo $row["idtempahan"]; ?>">Update</a>
                             <a href="delete.php?idtempahan=<?php echo $row["idtempahan"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
-=======
-                            <a href="update.php?idcustomer=<?php echo $row["idtempahan"]; ?>">Update</a>
-                            <a href="delete.php?idcustomer=<?php echo $row["idtempahan"]; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a>
->>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
                         </td>
                     </tr>
 
