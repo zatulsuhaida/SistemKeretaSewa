@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Sep 19, 2021 at 01:15 PM
+-- Generation Time: Sep 19, 2021 at 01:28 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
-=======
--- Generation Time: Sep 19, 2021 at 12:36 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.3.29
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customerlist` (
-  `idmanager` int(20) NOT NULL,
+  `idCustomer` int(20) NOT NULL,
   `NamaPenyewa` varchar(50) NOT NULL,
   `NoTelefon` text NOT NULL,
   `Email` varchar(50) NOT NULL,
@@ -46,7 +40,7 @@ CREATE TABLE `customerlist` (
 -- Dumping data for table `customerlist`
 --
 
-INSERT INTO `customerlist` (`idmanager`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
+INSERT INTO `customerlist` (`idCustomer`, `NamaPenyewa`, `NoTelefon`, `Email`, `NoIC`, `Alamat`) VALUES
 (101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
 (123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya');
 
@@ -82,11 +76,7 @@ INSERT INTO `kereta` (`idkereta`, `modal`, `priceperday`, `priceperweek`) VALUES
 CREATE TABLE `tempahan` (
   `idtempahan` int(30) NOT NULL,
   `idkereta` int(11) NOT NULL,
-<<<<<<< HEAD
-  `idCustomer` int(11) NOT NULL,
-=======
-  `idmanager` int(11) NOT NULL,
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
+  `idcustomer` int(11) NOT NULL,
   `tarikhambil` date NOT NULL,
   `masaambil` varchar(20) NOT NULL,
   `tarikhhantar` date NOT NULL,
@@ -97,11 +87,7 @@ CREATE TABLE `tempahan` (
 -- Dumping data for table `tempahan`
 --
 
-<<<<<<< HEAD
-INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idCustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-=======
-INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idmanager`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
+INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
 (1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
 
 --
@@ -112,7 +98,7 @@ INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idmanager`, `tarikhambil`, `m
 -- Indexes for table `customerlist`
 --
 ALTER TABLE `customerlist`
-  ADD PRIMARY KEY (`idmanager`);
+  ADD PRIMARY KEY (`idCustomer`);
 
 --
 -- Indexes for table `kereta`
@@ -126,11 +112,7 @@ ALTER TABLE `kereta`
 ALTER TABLE `tempahan`
   ADD PRIMARY KEY (`idtempahan`),
   ADD KEY `test` (`idkereta`),
-<<<<<<< HEAD
-  ADD KEY `cth` (`idCustomer`);
-=======
-  ADD KEY `cth` (`idmanager`);
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
+  ADD KEY `cth` (`idcustomer`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -140,7 +122,7 @@ ALTER TABLE `tempahan`
 -- AUTO_INCREMENT for table `customerlist`
 --
 ALTER TABLE `customerlist`
-  MODIFY `idmanager` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
+  MODIFY `idCustomer` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224424;
 
 --
 -- AUTO_INCREMENT for table `kereta`
@@ -162,11 +144,7 @@ ALTER TABLE `tempahan`
 -- Constraints for table `tempahan`
 --
 ALTER TABLE `tempahan`
-<<<<<<< HEAD
   ADD CONSTRAINT `cth` FOREIGN KEY (`idCustomer`) REFERENCES `customerlist` (`idCustomer`),
-=======
-  ADD CONSTRAINT `cth` FOREIGN KEY (`idmanager`) REFERENCES `customerlist` (`idmanager`),
->>>>>>> 15357350dbdf2457423409ef5eef6cd9eb500a84
   ADD CONSTRAINT `test` FOREIGN KEY (`idkereta`) REFERENCES `kereta` (`idkereta`);
 COMMIT;
 

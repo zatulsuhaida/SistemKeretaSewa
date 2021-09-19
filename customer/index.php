@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $sql);
     <tr> 
         <th>idtempahan</th>
         <th>idkereta</th>
-        <th>idCustomer</th>
+        <th>idcustomer</th>
         <th>Tarikh Ambil</th> 
         <th>Masa Ambil</th> 
         <th>Tarikh Hantar</th> 
@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $sql);
                 <tr>  
                     <td><?php echo $row["idtempahan"]; ?></td>
                     <td><?php echo $row["idkereta"]; ?></td>
-                    <td><?php echo $row["idCustomer"]; ?></td>
+                    <td><?php echo $row["idcustomer"]; ?></td>
                     <td><?php echo $row["tarikhambil"]; ?></td> 
                     <td><?php echo $row["masaambil"]; ?></td> 
                     <td><?php echo $row["tarikhhantar"]; ?></td> 
