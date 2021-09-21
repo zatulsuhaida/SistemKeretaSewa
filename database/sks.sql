@@ -1,15 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Sep 19, 2021 at 07:37 PM
-=======
--- Generation Time: Sep 19, 2021 at 03:23 PM
->>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Generation Time: Sep 21, 2021 at 09:46 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,6 +43,7 @@ CREATE TABLE `customer` (
 INSERT INTO `customer` (`idcustomer`, `namapenyewa`, `notelefon`, `email`, `noic`, `alamat`) VALUES
 (101010, 'Syawal', '0112223333', 'syawal@gmail.com', '1998-12-0987', 'Tokyo Japan'),
 (123456, 'Syakir', '0123456790', 'syakir99@gmail.com', '00218020689', 'No 24 Taman Sri Jaya'),
+(678901, 'adzlan abu hasan', '0199957347', 'adzlan79@yahoo.com', '020218020689', 'NO 38 TAMAN SRI JAYA KUALA PEGANG'),
 (888877, 'radzi', '01270464543', 'radzi@gmail.com', '00999897463', 'Jabi');
 
 -- --------------------------------------------------------
@@ -95,7 +92,8 @@ CREATE TABLE `tempahan` (
 --
 
 INSERT INTO `tempahan` (`idtempahan`, `idkereta`, `idcustomer`, `tarikhambil`, `masaambil`, `tarikhhantar`, `destinasi`) VALUES
-(1, 1, 123456, '2022-06-21', '8:30 AM', '2022-06-25', 'Penang');
+(1, 1, 0, '2021-09-21', '15:38', '2021-09-30', 'Kuala Lumpur'),
+(2, 2, 123456, '0000-00-00', '16:24', '2021-09-29', 'Perlis');
 
 --
 -- Indexes for dumped tables
@@ -139,11 +137,7 @@ ALTER TABLE `kereta`
 -- AUTO_INCREMENT for table `tempahan`
 --
 ALTER TABLE `tempahan`
-<<<<<<< HEAD
   MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
-  MODIFY `idtempahan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
->>>>>>> 0e3e224ca06082def2c0acdbf51a8f3c1760a40e
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

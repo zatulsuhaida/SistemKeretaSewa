@@ -19,7 +19,7 @@ if($idtempahan==""){
 if($idkereta==""){
 	echo "<script>alert('Please Enter idkereta');window.location='register.php'</script>";
 }
-if($idcustomer=""){
+if($idcustomer==""){
 	echo "<script>alert('Please Enter idcustomer');window.location='register.php'</script>";
 }
 

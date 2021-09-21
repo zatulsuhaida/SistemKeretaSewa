@@ -55,12 +55,12 @@ $row = $resultusr->fetch_assoc();
             <input type="text" name="idcustomer" value="<?php echo $row["idcustomer"]; ?>">
             <br>
             <br>
-            <b>tarikh ambik :</b>
-            <input type="date" name="tarikhambik" value="<?php echo $row["tarikhambik"]; ?>">
+            <b>tarikh ambil :</b>
+            <input type="date" name="tarikhambil" value="<?php echo $row["tarikhambil"]; ?>">
             <br>
             <br>
-            <b>masa ambik :</b>
-            <input type="time" name="masaambik" value="<?php echo $row["masaambik"]; ?>">
+            <b>masa ambil :</b>
+            <input type="time" name="masaambil" value="<?php echo $row["masaambil"]; ?>">
             <br>
             <br>
             <b>tarikh hantar :</b>
